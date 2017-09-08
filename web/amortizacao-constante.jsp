@@ -60,25 +60,17 @@
                             <%
                                
                                for(int i= 0; i<= tempo; i++){
-                                   %><tr><%
-                                        out.println(i);
-                                       %><td><%
-                                        out.println(amortizacao);
-                                       %></td>
-                                       %><td><%
-                                           if (i == 0){
-                                               out.println("0");
+                                   %><tr>
+                                       <td><%=i%></td>
+                                       <td><%=amortizacao%></td>                                    
+                                       <td><%if (i == 0){out.println("0");
                                            }
                                            else{
                                         out.println(juros);
                                            }
                                        %></td>
-                                       %><td><%
-                                        out.println(parcela);
-                                       %></td>
-                                       %><td><%
-                                        out.println(divida);
-                                       %></td>
+                                       <td><%=parcela%></td>
+                                       <td><%=divida%></td>
                                    </tr>
                                    <%
                                        amortizacao = divida/tempo;

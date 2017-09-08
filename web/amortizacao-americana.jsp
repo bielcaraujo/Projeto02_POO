@@ -15,13 +15,7 @@
         double parcela= 0;
         
         %>
-        <form>
-            Divida a ser paga: <input type='number' step='0.01' min='1' name = 'divida' value = '<%=divida%>'/><br/>
-           Juros: <input type='number' step='0.01' min='1' name = 'juros' value = '<%=juros%>'/><br/>
-           Tempo*: <input type='number' step='0.01' min='1' name = 'tempo' value = '<%=tempo%>'/><br/>
-           <input type='submit' value ='Gerar'/>
-             </form>
-           <%
+        <%
                try{
                 if(request.getParameter("divida")!= null){
                 divida = Double.parseDouble(request.getParameter("divida"));
@@ -48,6 +42,12 @@
                 out.println("<span style='color:red;'>Você entrou com um número no formato inválido no campo de Tempo. Tente novamente: </span><br>");
             }
                %>
+        <form>
+            Divida a ser paga: <input type='number' step='0.01' min='1' name = 'divida' value = '<%=divida%>'/><br/>
+           Juros: <input type='number' step='0.01' min='1' name = 'juros' value = '<%=juros%>'/><br/>
+           Tempo*: <input type='number' step='0.01' min='1' name = 'tempo' value = '<%=tempo%>'/><br/>
+           <input type='submit' value ='Gerar'/>
+             </form>
                <table border="1">
                    <tr>
                        <th>Período</th>
@@ -59,25 +59,18 @@
                             <%
                                
                                for(int i= 0; i<= tempo; i++){
-                                   %><tr><%
-                                        out.println(i);
-                                       %><td><%
-                                        out.println(amortizacao);
-                                       %></td>
-                                       %><td><%
-                                        if (i == 0){
-                                               out.println("0");
+                                   %><tr>
+                                       <td><%=i%></td>
+                                        <td><%=amortizacao%></td>
+                                       <td><%
+                                        if (i == 0){ out.println("0");
                                            }
                                            else{
                                         out.println(juros);
                                            }
                                        %></td>
-                                       %><td><%
-                                        out.println(parcela);
-                                       %></td>
-                                       %><td><%
-                                        out.println(divida);
-                                       %></td>
+                                       <td><%=parcela%></td>
+                                       <td><%=divida%></td>
                                    </tr>
                                    <% if( i == tempo){
                                         amortizacao = divida;
