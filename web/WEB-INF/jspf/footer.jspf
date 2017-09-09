@@ -1,3 +1,29 @@
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-<h2>Hello World!</h2>
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h2><a href="home.jsp" style="color:#939393">Home</a><br/><br/></h2>
+              <h3><a href="tabela-price.jsp" style="color:#939393">Price</a><br/>
+              <a href="amortizacao-constante.jsp" style="color:#939393">Constante</a><br/>
+              <a href="amortizacao-americana.jsp" style="color:#939393">Americana</a></h3>
+            </div>
+            <div class="footer-col col-md-4">
+            </div>
+            <div class="footer-col col-md-4"> 
+              <img src="http://fatecpg.edu.br/img/logoFatec.png" class="img-fluid"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Cálculos de Amortização 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>

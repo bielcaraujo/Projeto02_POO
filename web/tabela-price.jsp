@@ -8,12 +8,10 @@
 <%@page import="java.text.DecimalFormat"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tabela Price</title>
-    </head>
+    <%@include file="WEB-INF/jspf/header.jspf" %>
+    <%@include file="WEB-INF/jspf/menu.jspf" %>
     <body>
-        <h1>Gerador de Tabela Price</h1>
+        <br/><br/><br/><br/><br/><br/><h1>Gerador de Tabela Price</h1>
         <hr/>
         <%
             //inicialização das variaveis
@@ -48,13 +46,14 @@
                 out.println("<span style='color:red;'>Você entrou com um número no formato inválido no campo de Tempo. Tente novamente: </span><br>");
             }
         %>
-        <form>
-           Divida a ser paga: <input type='number' step='0.01' min='1' name = 'divida' value = '<%=divida%>'/><br/>
-           Juros: <input type='number' step='0.01' min='1' name = 'juros' value = '<%=juros%>'/><br/>
-           Tempo*: <input type='number' step='0.01' min='1' name = 'tempo' value = '<%=tempo%>'/><br/>
-           <input type='submit' value ='Gerar'/>
-        </form>
-           <table border='1'>
+        <br/><br/><center><form>
+           <h5>Divida:</h5> <input type='number' step='0.01' min='1' name = 'divida' value = '<%=divida%>'/><br/>
+           <h5>Juros:</h5> <input type='number' step='0.01' min='0' name = 'juros' value = '<%=juros%>'/><br/>
+           <h5>Tempo*:</h5> <input type='number' step='0.01' min='1' name = 'tempo' value = '<%=tempo%>'/><br/>
+           <h6>*Tempo em meses</h6>
+           <input type='submit' value ='Gerar'/><br/>
+        </form></center>
+           <table border='1'class="table table-striped table-bordered table-hover">
                <tr>
                    <th>Período<hr></th>
                    <th>Amortização<hr></th>
@@ -86,5 +85,6 @@
                }
            %> 
            </table>
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
