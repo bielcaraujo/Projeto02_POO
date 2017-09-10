@@ -11,7 +11,7 @@
     <%@include file="WEB-INF/jspf/header.jspf" %>
     <%@include file="WEB-INF/jspf/menu.jspf" %>
     <body>
-        <br/><br/><br/><br/><br/><br/><h1>Amortização Americana</h1>
+        <br/><br/><br/><br/><br/><br/><h1>Amortização Constante</h1>
         <hr/>
         <%
             //inicialização das variaveis
