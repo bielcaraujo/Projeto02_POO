@@ -68,18 +68,25 @@
                double amortizacao = 0;
                double jurosP = 0;
                double parcelaShow = 0;
+               amortizacao = divida/tempo;
                for(int i=0;i<=tempo;i++){
            %>
             <tr>
                 <td><%=i%><hr></td>
+                <%if(i == 0){%>
+                <td>,00</td>
+               <% }
+                else{%>
                 <td><%=arredonda.format(amortizacao)%><hr></td>
+                <%}%>
                 <td><%=arredonda.format(parcelaShow)%><hr></td>
                 <td><%=arredonda.format(jurosP)%><hr></td>
                 <td><%=arredonda.format(divida)%><hr></td>
             </tr>
            <%
-               
-               
+               jurosP = divida * indiceJ;
+               parcelaShow = amortizacao + jurosP;
+               divida = divida - amortizacao;
                }
            %> 
            </table>
