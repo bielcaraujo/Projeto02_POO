@@ -81,13 +81,13 @@
                 <td><%=arredonda.format(divida)%><hr></td>
             </tr>
            <%
-               parcelaShow = parcela;
                jurosP = indiceJ * divida;
-               amortizacao = parcela - jurosP;
-               divida = divida - amortizacao;
                totalA = amortizacao + totalA;
                totalP = parcelaShow + totalP;
                totalJ = jurosP + totalJ;
+               parcelaShow = parcela;
+               amortizacao = parcela - jurosP;
+               divida = divida - amortizacao;
              %> 
              <%if(i == tempo){%>
                 <tr>
