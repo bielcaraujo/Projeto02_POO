@@ -82,23 +82,21 @@
             </tr>
            <%
                jurosP = indiceJ * divida;
-               totalA = amortizacao + totalA;
-               totalP = parcelaShow + totalP;
-               totalJ = jurosP + totalJ;
                parcelaShow = parcela;
                amortizacao = parcela - jurosP;
                divida = divida - amortizacao;
-             %> 
-             <%if(i == tempo){%>
-                <tr>
-                <td>Total</td>    
+               totalJ = jurosP + totalJ;
+               if(i>=1){
+               totalA = amortizacao + totalA;
+               totalP = parcelaShow + totalP;
+                } }%>
+                                <tr>
+                <td><b>∑ →</b></td>    
                 <td><%=arredonda.format(totalA)%><hr></td>
                 <td><%=arredonda.format(totalP)%><hr></td>
                 <td><%=arredonda.format(totalJ)%><hr></td>
                 <td>-<hr></td>
                 </tr>
-                <%}
-                }%>
            </table>
     <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
