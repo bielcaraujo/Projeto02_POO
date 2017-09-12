@@ -68,11 +68,15 @@
                double amortizacao = 0;
                double jurosP = 0;
                double parcelaShow = 0;
+               double totalA = 0;
+               double totalP = 0;
+               double totalJ = 0;
                for(int i=0;i<=tempo;i++){
                    if(i == tempo){
                amortizacao = divida;
                divida = divida - amortizacao;
                }
+               parcelaShow = jurosP + amortizacao;
            %>
             <tr>
                 <td><%=i%><hr></td>
@@ -83,10 +87,20 @@
             </tr>
            <%
                jurosP = divida*indiceJ;
-               parcela = jurosP + amortizacao;
-               
-               }
-           %> 
+               totalA = amortizacao + totalA;
+               totalP = parcelaShow + totalP;
+               totalJ = jurosP + totalJ;
+             %> 
+             <%if(i == tempo){%>
+                <tr>
+                <td>Total</td>    
+                <td><%=arredonda.format(totalA)%><hr></td>
+                <td><%=arredonda.format(totalP)%><hr></td>
+                <td><%=arredonda.format(totalJ)%><hr></td>
+                <td>-<hr></td>
+                </tr>
+                <%}
+                }%>
            </table>
     <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
