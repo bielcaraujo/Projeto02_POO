@@ -4,10 +4,10 @@
         <div class="container">
           <div class="row">
             <div class="footer-col col-md-4">
-              <h2><a href="home.jsp" style="color:#939393">Home</a><br/><br/></h2>
-              <h3><a href="tabela-price.jsp" style="color:#939393">Price</a><br/>
-              <a href="amortizacao-constante.jsp" style="color:#939393">Constante</a><br/>
-              <a href="amortizacao-americana.jsp" style="color:#939393">Americana</a></h3>
+              <h2><a href="home.jsp" style="color:#FFFFFF">Home</a><br/><br/></h2>
+              <h3><a href="tabela-price.jsp" style="color:#FFFFFF">Price</a><br/>
+              <a href="amortizacao-constante.jsp" style="color:#FFFFFF">Constante</a><br/>
+              <a href="amortizacao-americana.jsp" style="color:#FFFFFF">Americana</a></h3>
             </div>
             <div class="footer-col col-md-4">
             </div>
